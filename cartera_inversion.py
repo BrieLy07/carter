@@ -1,3 +1,4 @@
+# Pulp es una biblioteca de optimización de Python que se utiliza para resolver problemas de programación lineal.
 from pulp import *
 
 # Datos del problema
@@ -30,6 +31,7 @@ model.solve()
 
 # Imprimir la solución
 # Se imprime el estado de la solución y la composición de la cartera óptima.
+# Si es optimo es la mejor solución para las restricciones que hemos colocado, si es infeasible no se puede resolver.
 print("Estado:", LpStatus[model.status])
 print("Composición de la cartera:")
 for v in model.variables():
